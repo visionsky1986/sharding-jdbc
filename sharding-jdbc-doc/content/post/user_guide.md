@@ -1,7 +1,7 @@
 +++
 date = "2016-01-08T16:14:21+08:00"
 title = "使用指南"
-weight=1
+weight = 1
 +++
 
 # 使用指南
@@ -110,11 +110,8 @@ private static DataSource createDataSource(final String dataSourceName) {
 
 ## 策略配置
 ### 数据源策略与表策略
-<<<<<<< HEAD
-![策略类图](img/StrategyClass.900.png)
-=======
-![策略类图](/img/StrategyClass.900.png)
->>>>>>> d2aa9f588f5ed3f3bb4b93f956bb07d35ba29e70
+
+![策略类图](../../img/StrategyClass.900.png)
 Sharding-JDBC认为对于分片策略存有两种维度
 - 数据源分片策略`DatabaseShardingStrategy`：数据被分配的目标数据源
 - 表分片策略`TableShardingStrategy`：数据被分配的目标表，该目标表存在与该数据的目标数据源内。故表分片策略是依赖与数据源分片策略的结果的
@@ -124,7 +121,7 @@ Sharding-JDBC认为对于分片策略存有两种维度
 ```java
 TableRule orderTableRule = new TableRule("t_order", Arrays.asList("t_order_0", "t_order_1"),
                   new DatabaseShardingStrategy("user_id", new ModuloDatabaseShardingAlgorithm()),
-                  new TableShardingStrategy("order_id", new ModuloTableShardingAlgorithm())
+                  new TableShardingStrategy("order_id", new ModuloTableShardingAlgorithm()),
                   dataSourceRule);
 ```
 
@@ -168,11 +165,8 @@ new TableShardingStrategy(Arrays.asList("order_id"，"order_type", "order_date")
 
 ### 分片算法
 分片算法接口类图关系如下：
-<<<<<<< HEAD
-![算法](img/AlgorithmClass.900.png)
-=======
-![算法](/img/AlgorithmClass.900.png)
->>>>>>> d2aa9f588f5ed3f3bb4b93f956bb07d35ba29e70
+
+![算法](../../img/AlgorithmClass.900.png)
 
 ### 绑定表
 绑定表代表一组表，这组表的逻辑表与实际表之间的映射关系是相同的。比如`t_order`与`t_order_item`就是这样一组绑定表关系,它们的分库与分表策略是完全相同的,那么可以使用它们的表规则将它们配置成绑定表

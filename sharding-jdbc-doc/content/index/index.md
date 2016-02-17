@@ -1,8 +1,3 @@
-+++
-date = "2016-01-08T16:14:21+08:00"
-index = true
-+++
-
 # 主要贡献者
 
 * 张亮 &nbsp;&nbsp;&nbsp;[当当](http://www.dangdang.com/) zhangliang@dangdang.com
@@ -10,7 +5,7 @@ index = true
 * 曹昊 &nbsp;&nbsp;&nbsp;[当当](http://www.dangdang.com/) caohao@dangdang.com
 * 岳令 &nbsp;&nbsp;&nbsp;[当当](http://www.dangdang.com/) yueling@dangdang.com
 
-**讨论QQ群：**xxx（不限于Sharding-JDBC，包括分布式，数据库相关以及其他互联网技术交流）
+**讨论QQ群：**532576663（不限于Sharding-JDBC，包括分布式，数据库相关以及其他互联网技术交流）
 
 # 简介
 `Sharding-JDBC`是当当应用框架`ddframe`中，关系型数据库模块`dd-rdb`中分离出来的数据库水平扩展框架，即透明化数据库分库分表访问。
@@ -32,25 +27,21 @@ index = true
 
 以下是常见的分库分表产品和`Sharding-JDBC`的对比：
 
-| 功能          | Cobar(MyCAT)  | Cobar-client  | TDDL        | Sharding-JDBC  |
-| ------------- |:-------------:| -------------:| -----------:|---------------:|
-| 分库          | 有            | 有             | 未开源      | 有              |
-| 分表          | 无            | 无             | 未开源      | 有              |
-| 中间层        | 是            | 否             | 否          | 否              |
-| ORM支持       | 任意          | 仅MyBatis      | 任意        | 任意            |
-| 数据库支持     | 仅MySQL       | 任意           | 任意        | 任意            |
-| 异构语言       | 可           | 仅Java          | 仅Java     | 仅Java          |
-| 外部依赖       | 无           | 无              | Diamond    | 无              |
+| 功能          | Cobar         | Cobar-client   | TDDL        | Sharding-JDBC   |
+| ------------- |:-------------:| --------------:| -----------:|----------------:|
+| 分库          | 有            | 有             | 未开源      | 有                |
+| 分表          | 无            | 无             | 未开源      | 有                |
+| 中间层        | 是            | 否             | 否          | 否                |
+| ORM支持       | 任意          | 仅MyBatis      | 任意        | 任意              |
+| 数据库支持     | 仅MySQL       | 任意           | 任意        | 任意              |
+| 异构语言       | 可            | 仅Java         | 仅Java      | 仅Java           |
+| 外部依赖       | 无            | 无             | Diamond     | 无               |
 
 ***
 
 # 整体架构图
 
-<<<<<<< HEAD
 ![整体架构图1](img/architecture.png)
-=======
-![整体架构图1](../img/architecture.png)
->>>>>>> d2aa9f588f5ed3f3bb4b93f956bb07d35ba29e70
 
 # Quick Start
 
